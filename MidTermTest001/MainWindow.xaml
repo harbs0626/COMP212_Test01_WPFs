@@ -1,0 +1,74 @@
+﻿<Window x:Class="MidTermTest001.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MidTermTest001"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="503" WindowStartupLocation="CenterScreen">
+    <Grid HorizontalAlignment="Left" Width="493">
+        <Label Content="SalesPerson" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <DataGrid x:Name="SalesPersonDataGrid" HorizontalAlignment="Left" Height="349" Margin="10,60,0,0" VerticalAlignment="Top" Width="476" 
+                  AutoGenerateColumns="False" SelectedCellsChanged="SalesPersonDataGrid_SelectedCellsChanged">
+            <DataGrid.Columns>
+
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBox x:Name="IDTextBox" IsReadOnly="True" Width="0" Text="{Binding ID}" 
+                                         BorderThickness="0" Background="Transparent"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="First Name" Width="100">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBox x:Name="FirstNameTextBox" IsReadOnly="True" Width="120" Text="{Binding FirstName}" 
+                                         BorderThickness="0" Background="Transparent"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="Last Name" Width="100">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBox x:Name="LastNameTextBox" IsReadOnly="True" Width="120" Text="{Binding LastName}" 
+                                         BorderThickness="0" Background="Transparent"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="Email" Width="100">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBox x:Name="Email" IsReadOnly="True" Width="120" Text="{Binding Email}" 
+                                         BorderThickness="0" Background="Transparent"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="Contact No" Width="180">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBox x:Name="ContactNoTextBox" IsReadOnly="True" Width="120" Text="{Binding ContactNo}" 
+                                         BorderThickness="0" Background="Transparent"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>
